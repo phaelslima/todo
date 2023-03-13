@@ -41,4 +41,11 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     paddingHorizontal: 24,
   },
+  list: {
+    paddingHorizontal: 24,
+    paddingBottom: 24,
+  },
+  separator: {
+    height: 10,
+  },
 })
