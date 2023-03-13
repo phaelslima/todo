@@ -48,7 +48,19 @@ export function Home() {
     setNewTask('')
   }
 
-  function handleRemoveTask(id: string) {}
+  function handleRemoveTask(id: string) {
+    Alert.alert('Remover', 'Deseja remover esta tarefa?', [
+      {
+        text: 'Sim',
+        onPress: () =>
+          setTasks((prevState) => prevState.filter((task) => task.id !== id)),
+      },
+      {
+        text: 'Não',
+        style: 'cancel',
+      },
+    ])
+  }
 
   function handleDoneTask(id: string) {}
 
