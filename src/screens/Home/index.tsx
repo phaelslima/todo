@@ -28,7 +28,25 @@ export function Home() {
 
   const [newTask, setNewTask] = useState('')
 
-  function handleAddTask() {}
+  function handleAddTask() {
+    if (!newTask.trim()) {
+      return Alert.alert(
+        'Tarefa vazia!',
+        'Por favor, informe a descrição para a tarefa.'
+      )
+    }
+
+    setTasks((prevState) => [
+      ...prevState,
+      {
+        id: new Date().toISOString(),
+        content: newTask,
+        done: false,
+      },
+    ])
+
+    setNewTask('')
+  }
 
   function handleRemoveTask(id: string) {}
 
