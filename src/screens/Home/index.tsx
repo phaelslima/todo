@@ -62,7 +62,14 @@ export function Home() {
     ])
   }
 
-  function handleDoneTask(id: string) {}
+  function handleDoneTask(id: string) {
+    setTasks((prevState) =>
+      prevState.map((task) => {
+        if (task.id === id) task.done = !task.done
+        return task
+      })
+    )
+  }
 
   return (
     <View style={styles.container}>
