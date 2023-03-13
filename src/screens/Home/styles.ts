@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: -27,
     marginHorizontal: 24,
+    marginBottom: 32,
   },
   input: {
     flex: 1,
@@ -33,5 +34,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#1E6F9F',
     borderRadius: 6,
+  },
+  counters: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+    paddingHorizontal: 24,
   },
 })
